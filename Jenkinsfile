@@ -1,5 +1,19 @@
 pipeline {
+
     agent any
+
+    parameters {
+        choice(
+            name: 'SCRIPT_NAME',
+            choices: [
+                'CustomScriptTest',
+                'jenkinsTest',
+                'test2Jenkins',
+                'all'
+            ],
+            description: 'Select npm script to execute'
+        )
+    }
 
     stages {
 
@@ -17,7 +31,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'npx playwright test'
+                bat "npm run ${params.SCRIPT_NAME}"
             }
         }
     }
@@ -32,4 +46,3 @@ pipeline {
         }
     }
 }
-
