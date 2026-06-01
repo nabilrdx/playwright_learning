@@ -1,0 +1,24 @@
+{
+  "name": "playwright_automation_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "CustomScriptTest": "playwright test --grep @smoke",
+    "jenkinsTest": "playwright test pomPracticeTest.spec.js",
+    "test2Jenkins": "playwright test testLocators.spec.js",
+    "all": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0",
+    "allure-playwright": "^3.9.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
