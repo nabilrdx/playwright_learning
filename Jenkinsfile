@@ -21,7 +21,6 @@ pipeline {
             }
         }
     }
-<<<<<<< HEAD:jenkinsfile
 
     post {
         always {
@@ -33,6 +32,4 @@ pipeline {
         }
     }
 }
-=======
-}
->>>>>>> 45ae85f6f81acf6870f405b0e2735b60a82c346d:Jenkinsfile
+
